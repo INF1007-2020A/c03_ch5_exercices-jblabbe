@@ -24,7 +24,18 @@ def use_prefixes() -> List[str]:
 
 
 def prime_integer_summation() -> int:
-    return 0
+    nombrePremier = 0
+    nombre = 2
+    somme = 0
+    while(nombrePremier < 100):
+        for i in range(1, nombre + 1):
+            if (nombre % i == 0 and i != 1 and i != nombre):
+                break
+            elif(i == nombre):
+                nombrePremier += 1
+                somme += nombre
+    nombre += 1
+    return somme
 
 
 def factorial(number: int) -> int:
@@ -40,7 +51,10 @@ def factorial(number: int) -> int:
 
 
 def use_continue() -> None:
-    pass
+    for chiffre in range(1, 11):
+        if chiffre == 5:
+            continue
+        print(chiffre)
 
 
 def main() -> None:
